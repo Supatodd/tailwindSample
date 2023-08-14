@@ -1,0 +1,131 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- CSS file -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- JavaScript file -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+    
+</head>
+<body class="text-gray-500">
+    
+
+    <div> <!-- Content wrapper-->
+        <div class="bg-black w-auto">
+            <nav class="bg-gray-800">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                  <div class="flex items-center justify-between h-32">
+                    <div class="flex items-center">
+                      <div class="flex-shrink-0">
+                        <img class="h-8 w-8" src="imgs/logo.png" alt="Logo">
+                      </div>
+                      <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                          <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                          <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+                          <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                          <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="hidden md:block">
+                      <div class="ml-4 flex items-center md:ml-6">
+                        <!-- Add additional elements here such as user profile or notifications -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            
+        </div>
+
+        <main> 
+           
+            <section class="bg-gray-900 text-white">
+                <div class="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
+                  <div class="lg:flex lg:items-center lg:justify-between">
+                    <div class="lg:w-1/2">
+                      <h1 class="text-4xl font-bold mb-6">Welcome to Our Website</h1>
+                      <p class="text-lg mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus mauris id turpis luctus, ut commodo ligula ullamcorper. Proin id fermentum turpis, eget tempor sem.</p>
+                      <a href="#" class="bg-indigo-500 hover:bg-indigo-600 text-white py-3 px-6 rounded-md font-medium">Get Started</a>
+                    </div>
+                    <div class="lg:w-1/2 mt-8 lg:mt-0">
+                      <img src="imgs/hero-image.jpg" alt="Hero Image" class="rounded-lg shadow-xl">
+                    </div>
+                  </div>
+                </div>
+              </section>
+              
+              <section class="py-12">
+                <div class="container mx-auto h-20">
+                 
+                  <h2 class="text-3xl font-bold mb-6">Featured Cards</h2>
+                  <div class="swiper-container min-w-full ">
+                    <div class="swiper-wrapper">
+                      <!-- Slide 1 -->
+                      <div class="swiper-slide">
+                        <div class="bg-white shadow-lg rounded-lg p-6">
+                          <h3 class="text-xl font-bold mb-2">Card 1</h3>
+                          <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                      </div>
+                      <!-- Slide 2 -->
+                      <div class="swiper-slide">
+                        <div class="bg-white shadow-lg rounded-lg p-6">
+                          <h3 class="text-xl font-bold mb-2">Card 2</h3>
+                          <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                      </div>
+                      <!-- Slide 3 -->
+                      <div class="swiper-slide">
+                        <div class="bg-white shadow-lg rounded-lg p-6">
+                          <h3 class="text-xl font-bold mb-2">Card 3</h3>
+                          <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                      </div>
+                      <!-- Add more slides as needed -->
+                    </div>
+                    <!-- Add navigation buttons -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
+                </div>
+              </section>   
+              
+              <section>
+                
+              <div class="">
+                <button id="showOverlay" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">
+                  Show Overlay
+                </button>
+              </div>
+
+              <!-- Overlay -->
+              <div id="overlay" class="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 hidden">
+                <div class="bg-white p-6 rounded shadow-md">
+                  <h2 class="text-xl font-semibold mb-4">Overlay Content</h2>
+                  <p>This is the overlay content. You can add any content here.</p>
+                  <button id="closeOverlay" class="mt-4 bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded">
+                    Close Overlay
+                  </button>
+                </div>
+              </div>
+            </section>
+
+        </main>
+    </div>
+
+
+
+
+</body>
+</html>
