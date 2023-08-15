@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-    outline: 1px solid red;
+
+.swiper-button-next, .swiper-button-prev {
+    top: auto !important;
   }
