@@ -20,4 +20,19 @@ closeOverlayButton.addEventListener('click', () => {
   overlay.classList.add('hidden');
 });
 
+const fadeElements = document.querySelectorAll('.fade-in');
+
+function checkFade() {
+    fadeElements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        if (elementTop < window.innerHeight * 0.8) {
+            element.classList.add('show');
+        }
+    });
+}
+
+window.addEventListener('scroll', checkFade);
+window.addEventListener('load', checkFade);
+
+
 })

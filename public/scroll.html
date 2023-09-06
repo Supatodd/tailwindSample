@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Effects Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .parallax {
+            background-image: url('imgs/background.jpeg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 2rem;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20%);
+            transition: opacity 1s, transform 1s;
+        }
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="parallax">
+        <h1>Parallax Scroll Effect</h1>
+    </div>
+    <div style="height: 800px;"></div> <!-- Spacer -->
+    <div class="fade-in">
+        <h2 class="fade-in">Fade-In Scroll Effect</h2>
+    </div>
+    <div style="height: 800px;"></div> <!-- Spacer -->
+    <script>
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        function checkFade() {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                if (elementTop < window.innerHeight * 0.8) {
+                    element.classList.add('show');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkFade);
+        window.addEventListener('load', checkFade);
+    </script>
+</body>
+</html>
